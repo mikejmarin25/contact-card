@@ -1,2 +1,2 @@
-import "./form.js";
-import "./submit.js"; 
+import  "./form";
+import "./submit";
