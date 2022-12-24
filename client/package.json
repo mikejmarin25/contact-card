@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "private": "true",
+  "engines": {
+    "node": "17.x"
+  },
+  
   "scripts": {
     "build": "webpack --mode development",
     "dev": "webpack-dev-server",
@@ -24,8 +28,6 @@
   "dependencies": {
     "@popper.js/core": "^2.11.6",
     "bootstrap": "^5.2.3"
-  },
-  "engines": {
-    "node": "17.x"
+  }
 }
-}
+
