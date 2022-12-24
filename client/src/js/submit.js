@@ -1,2 +1,2 @@
-const submitButton = document.getElementById("submit-button");
-submitButton.disabled = true;
+const Button = document.getElementById("submit-button");
+// submitButton.disabled = false;
