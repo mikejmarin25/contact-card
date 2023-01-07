@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from '../images/logo.png';
 import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
-
+import { initdb } from './database';
 
 window.addEventListener('load', function () {
     document.getElementById('logo').src = Logo;
