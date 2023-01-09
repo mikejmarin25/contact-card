@@ -1,2 +1,1 @@
-const Button = document.getElementById("submit-button");
-// submitButton.disabled = false;
+// Removed so that submit button is now active! 
