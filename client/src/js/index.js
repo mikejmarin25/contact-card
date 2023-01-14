@@ -30,7 +30,6 @@ window.addEventListener('load', function () {
 });
 
 // Form functionality
-
 const form = document.getElementById("formToggle");
 const newContactButton = document.getElementById("new-contact");
 let submitBtnToUpdate = false;
