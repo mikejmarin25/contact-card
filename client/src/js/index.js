@@ -19,16 +19,23 @@ import Dog from '../images/dog.png';
 window.addEventListener('load', function () {
   initdb();
   fetchCards();
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    installBtn.style.visibility = 'visible';
+    });
+
   document.getElementById('logo').src = Logo;
   document.getElementById('bearThumbnail').src = Bear;
   document.getElementById('dogThumbnail').src = Dog;
 });
 
 // Form functionality
+
 const form = document.getElementById("formToggle");
 const newContactButton = document.getElementById("new-contact");
 let submitBtnToUpdate = false;
 let profileId;
+
 
 newContactButton.addEventListener('click', event => {
  toggleForm()
@@ -105,3 +112,21 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
   navigator.serviceWorker.register('./service-worker.js');
 })};
+
+// Install button
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  installBtn.style.visibility = 'visible';
+
+  installBtn.addEventListener('click', () => {
+    event.prompt();
+    installBtn.setAttribute('disabled', true);
+    installBtn.textContent = 'Installed!';
+  });
+});
+
+window.addEventListener('appinstalled', (event) => {
+  console.log('👍', 'appinstalled', event);
+});
